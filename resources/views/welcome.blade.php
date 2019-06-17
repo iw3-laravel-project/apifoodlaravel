@@ -65,7 +65,13 @@
         </style>
     </head>
     <body>
+        <!-- <div class="top-left">
+            <h2>AπFood</h2>
+        </div> -->
         <div class="flex-center position-ref full-height">
+        <div class="top-left">
+            <h2>AπFood</h2>
+        </div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -78,18 +84,15 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div id="app">
+                <index></index>
+                <passport-clients></passport-clients>
+                <passport-authorized-clients></passport-authorized-clients>
+                <passport-personal-access-tokens></passport-personal-access-tokens>
+            </div>
+                
             </div>
         </div>
+        <script src="js/app.js"></script>
     </body>
 </html>
