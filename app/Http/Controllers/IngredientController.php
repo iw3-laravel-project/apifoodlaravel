@@ -21,17 +21,17 @@ class IngredientController extends Controller
     {
         $ingredient = Ingredient::create($request->all());
 
-        return response()->json($article, 201);
+        return response()->json($ingredient, 201);
     }
 
-    public function update(Request $request, Article $ingredient)
+    public function update(Request $request, Ingredient $ingredient)
     {
         $ingredient->update($request->all());
 
-        return response()->json($article, 200);
+        return response()->json($ingredient, 200);
     }
 
-    public function delete(Ingredient $article)
+    public function delete(Ingredient $ingredient)
     {
         $ingredient->delete();
 

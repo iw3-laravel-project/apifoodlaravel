@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>AπFood</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -41,6 +41,12 @@
                 top: 18px;
             }
 
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+
             .content {
                 text-align: center;
             }
@@ -65,9 +71,6 @@
         </style>
     </head>
     <body>
-        <!-- <div class="top-left">
-            <h2>AπFood</h2>
-        </div> -->
         <div class="flex-center position-ref full-height">
         <div class="top-left">
             <h2>AπFood</h2>
@@ -84,12 +87,9 @@
             @endif
 
             <div class="content">
-            <div id="app">
-                <index></index>
-                <passport-clients></passport-clients>
-                <passport-authorized-clients></passport-authorized-clients>
-                <passport-personal-access-tokens></passport-personal-access-tokens>
-            </div>
+                <div id="app">
+                    <index></index>
+                </div>
                 
             </div>
         </div>

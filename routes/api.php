@@ -22,3 +22,6 @@ Route::get('ingredients/{ingredient}', 'IngredientController@show');
 Route::post('ingredients', 'IngredientController@store');
 Route::put('ingredients/{ingredient}', 'IngredientController@update');
 Route::delete('ingredients/{ingredient}', 'IngredientController@delete');
+
+
+Route::get('ingredients/search/result', 'SearchController@result');
