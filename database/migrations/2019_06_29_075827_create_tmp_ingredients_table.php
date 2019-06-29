@@ -16,8 +16,8 @@ class CreateTmpIngredientsTable extends Migration
         Schema::create('tmp_ingredients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('positive_votes');
-            $table->integer('negative-votes');
+            $table->integer('positive_votes')->default(0);
+            $table->integer('negative-votes')->default(0);
             $table->timestamps();
         });
     }

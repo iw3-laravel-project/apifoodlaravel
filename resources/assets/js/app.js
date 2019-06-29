@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('index', require('./pages/Index.vue'));
+Vue.component('propose-ingredients', require('./pages/ProposeIngredients.vue'));
 Vue.component('app-logo', require('./components/AppLogo.vue'));
 
 const app = new Vue({

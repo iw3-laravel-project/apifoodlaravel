@@ -25,3 +25,7 @@ Route::delete('ingredients/{ingredient}', 'IngredientController@delete');
 
 
 Route::get('ingredients/search/result', 'SearchController@result');
+
+
+Route::get('/tmp-ingredient', 'TmpIngredientController@index');
+Route::post('/tmp-ingredient', 'TmpIngredientController@store');
