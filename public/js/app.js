@@ -60391,7 +60391,7 @@ var store = function store() {
 
                 case 3:
                   _context.next = 5;
-                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get('/api/tmp-ingredient/find?search_ing=' + food).then(function (res) {
+                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get('/api/tmp-ingredients/find?search_ing=' + food).then(function (res) {
                     var data = res.data;
                     console.log('data return JSON tmp-ingredient', data);
                     if (data.length > 0) {
@@ -60425,7 +60425,7 @@ var store = function store() {
                 case 0:
                   console.log('[STORE] addIngredient', food);
                   _context2.next = 3;
-                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.post('/api/tmp-ingredient', { title: food }).then(function (data) {
+                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.post('/api/tmp-ingredients', { title: food }).then(function (data) {
                     console.log('all done');
                     commit('ADD_ING', data);
                   });
@@ -60482,7 +60482,7 @@ var store = function store() {
               switch (_context4.prev = _context4.next) {
                 case 0:
                   _context4.next = 2;
-                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.put('/api/tmp-ingredient/' + payload.id, { positive_votes: payload.positive_votes }).then(function (data) {
+                  return __WEBPACK_IMPORTED_MODULE_3_axios___default.a.put('/api/tmp-ingredients/' + payload.id, { positive_votes: payload.positive_votes }).then(function (data) {
                     console.log('all done');
                     commit('ADD_ING', data);
                   });

@@ -39,7 +39,7 @@ const store = () => new Vuex.Store({
           return 'nowhere to be found'
           // return data ? commit('SET_SEARCH_ING', data) : 'nowhere to be found'
         })
-      await axios.get(`/api/tmp-ingredient/find?search_ing=${food}`)
+      await axios.get(`/api/tmp-ingredients/find?search_ing=${food}`)
         .then(res => {
           let data = res.data
           console.log('data return JSON tmp-ingredient', data)
@@ -52,7 +52,7 @@ const store = () => new Vuex.Store({
     },
     async addIngredient ({ commit }, { food }) {
       console.log('[STORE] addIngredient', food)
-      await axios.post('/api/tmp-ingredient', { title: food })
+      await axios.post('/api/tmp-ingredients', { title: food })
         .then((data) => {
           console.log('all done')
           commit('ADD_ING', data)
@@ -67,7 +67,7 @@ const store = () => new Vuex.Store({
         })
     },
     async confirmVote ({ commit }, { payload }) {
-      await axios.put('/api/tmp-ingredient/' + payload.id , { positive_votes : payload.positive_votes })
+      await axios.put('/api/tmp-ingredients/' + payload.id , { positive_votes : payload.positive_votes })
         .then((data) => {
           console.log('all done')
           commit('ADD_ING', data)
