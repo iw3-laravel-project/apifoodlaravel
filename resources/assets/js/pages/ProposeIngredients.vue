@@ -24,6 +24,12 @@
     created() {
       this.listenForChanges();
     },
+    // mounted() {
+    //     Echo.channel('ingredients')
+    //         .listen('.newIngredientProposed', (tmpingredient) => {
+    //             this.messages.push(tmpingredient);
+    //         });
+    // },
     methods: {
       addTmpIngredient(ingredientName) {
         // check if entries are not empty
@@ -42,7 +48,7 @@
       listenForChanges() {
           console.log('on listen')
         Echo.channel('ingredients')
-          .listen('IngredientPublished', tmpingredient => {
+          .listen('IngredientPublished', newIngredientTitle => {
               console.log('ing')
             if (! ('Notification' in window)) {
               alert('Web Notification is not supported');

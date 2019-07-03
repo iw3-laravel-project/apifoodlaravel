@@ -55466,6 +55466,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     this.listenForChanges();
   },
 
+  // mounted() {
+  //     Echo.channel('ingredients')
+  //         .listen('.newIngredientProposed', (tmpingredient) => {
+  //             this.messages.push(tmpingredient);
+  //         });
+  // },
   methods: {
     addTmpIngredient: function addTmpIngredient(ingredientName) {
       var _this = this;
@@ -55484,7 +55490,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     listenForChanges: function listenForChanges() {
       console.log('on listen');
-      Echo.channel('ingredients').listen('IngredientPublished', function (tmpingredient) {
+      Echo.channel('ingredients').listen('IngredientPublished', function (newIngredientTitle) {
         console.log('ing');
         if (!('Notification' in window)) {
           alert('Web Notification is not supported');
