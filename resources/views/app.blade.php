@@ -14,6 +14,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css" />
         <!-- Styles -->
         <style>
             html, body {
@@ -81,29 +82,9 @@
 
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-        <div class="top-left">
-            <h2>AπFood</h2>
-        </div>
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
 
-            <div class="content">
-                <div id="app">
-                    <index></index>
-                    <propose-ingredients></propose-ingredients>
-                </div>
+        <div id="app"></div>
                 
-            </div>
-        </div>
-        <script src="js/app.js"></script>
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>

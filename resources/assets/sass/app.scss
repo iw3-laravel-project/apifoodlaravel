@@ -1,12 +1,11 @@
+@import 'partials/breakpoints';
+@import 'partials/variables';
+@import 'partials/buttons';
+@import 'partials/titles';
+@import 'partials/flexs';
+@import 'partials/forms';
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
-
-// Custom
-@import "custom";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

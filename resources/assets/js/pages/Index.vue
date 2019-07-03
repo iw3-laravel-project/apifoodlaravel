@@ -3,14 +3,14 @@
 
     <section class="landingpage">
       <div>
-        <app-logo></app-logo>
+        <app-logo/>
         <h1 class="title">
           Api Food Interface
         </h1>
         <h2 class="subtitle">
           An Open Source Project
         </h2>
-        <div class="links">
+        <div class="links flex--row">
           <a
             href="#landingpage1"
             class="button--green">How it works?</a>
@@ -21,21 +21,26 @@
       </div>
     </section>
 
-
-
+    <landing-work/>
+    <landing-help/>
+    
   </div>
 </template>
 
 <script>
 import AppLogo from '../components/AppLogo.vue'
+import LandingHelp from '../components/LandingHelp'
+import LandingWork from '../components/LandingWork'
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    LandingHelp,
+    LandingWork
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .landingpage {
   min-height: 93vh;
   display: flex;
@@ -43,38 +48,14 @@ export default {
   align-items: center;
   text-align: center;
 }
-.landingpage1 {
-  background-color: lightgrey;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.landingpage2 {
-  background-color: lightblue;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
 .links {
   padding-top: 15px;
+}
+.flex--row {
+  display: flex;
+  justify-content: space-around;
+  a {
+    padding: 5px;
+  }
 }
 </style>
